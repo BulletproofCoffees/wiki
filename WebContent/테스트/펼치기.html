@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<!-- jQuery를 사용하려면 아래 코드 한 줄을 반드시 추가해야한다. -->
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+
+
+	$(document).ready(function(){
+	    $("#spreadBtn").click(function(){
+	        if($("#hiddenList").is(":visible")){
+	            $("#hiddenList").slideUp();
+	        }else{
+	            $("#hiddenList").slideDown();
+	        }
+	    });
+	});
+</script>
+</HEAD>
+ 
+<BODY>
+<button id="spreadBtn" class="btn01" >펼치기</button>
+<form action ="WikiServlet?command=wikiUpdate" method="post" name="formm">
+<div id="hiddenList" class="example01" style="display: none;">
+             <div><input type="text" id="result"  name="title" ></div>
+             <textarea id="result2" cols="20" rows="10" name="content" ></textarea>	            
+   </div>
+    <div><input type="submit" type=button value='저장' ></div>
+             </form>
+</BODY>
+</HTML>
+
+
+출처: http://it-ing.tistory.com/53 [아이티-잉]

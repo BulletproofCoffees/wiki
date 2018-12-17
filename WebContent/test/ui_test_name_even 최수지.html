@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="jqtest.css" rel = "stylesheet"> 
+<!-- <script type="text/javascript" src="js/jquery-3.3.1.js"></script> -->
+<script src="//code.jquery.com/jquery.min.js"></script> <!-- 제이퀄리 먹임 -->
+<style type="text/css">
+
+/*1번*/#test p:nth-child(1){font-family: 돋움; font-weight: bold; font-size: 20px; color: blue;}
+/*2번*/#a {font-style: italic; font-family: 굴림; font-size: 16px; color: #E8334D;}
+/*3번*/.b {font-family: 돋움; text-decoration: underline; font-size: 12px;}
+/*4번*/#test p:nth-child(4) {text-indent: 10px; font-family: 돋움; font-size: 15px;}	
+/*5번*/#test p:nth-child(5) {line-height: 50px; font-family: 돋움; font-size: 16px; color: green; font-weight: bold;}	
+</style>
+<script type="text/javascript">
+
+	/*6번 */function target08(){$('select').val('second');	}
+	
+	/* 7번 */ function target10(){$("#target10 select option:nth-child(odd)").css("background","yellow");}
+	
+	/* 8번 */function target12(){$('.target12:empty').remove();}
+	
+	/* 9번 */function target14(){$(".one").insertAfter(".two");}
+	
+	/* 10번 */
+function target17() {		
+	var color = '';
+	var letters = ['red', 'yellow'];
+	color += letters[Math.floor(Math.random() * letters.length)];
+	document.getElementById('target17').style.background = color;
+}
+	
+</script>
+</head>
+<body>
+<h2>화면구현 평가</h2>
+<fieldset id="csstest">
+	<legend>1~5.아래 p태그들에 대해 CSS를 적용하시오.</legend>
+	<div>
+		<div id="test">
+			<p>1.오늘 점심은 어떤 메뉴일까?</p>
+			<p id="a">2.오늘 점심은 어떤 메뉴일까?</p>
+			<p class="b">3.오늘 점심은 어떤 메뉴일까?</p>
+			<p>4.오늘 점심은 어떤 메뉴일까?</p>
+			<p>5.오늘 점심은 어떤 메뉴일까?</p>
+		</div>
+		<hr/>
+		<div id="quiz">
+			<p>1.굵은 돋음, 크기 : 20px, 색상:blue</p>
+			<p>2.이탤릭체 굴림, 크기: 16px, 색상:#E8334D</p>
+			<p>3.밑줄이 있는 돋움, 크기: 12px</p>
+			<p>4.들여쓰기가 10px 되어 있는 돋움, 크기: 15px</p>
+			<p>5.줄간격이 50px인 굵은 돋움, 크기: 16px, 색상: green</p>
+		</div>
+	</div>
+</fieldset>
+<fieldset>
+	<legend>6.다음의 옵션중 second option을 선택하세요.</legend>
+	<button onclick="target08()">target08</button>
+	<div class="target08"><i>.target08</i><br/>
+		<select multiple="multiple">
+			<option>first</option>
+			<option value='second'>second(select me!)</option>
+			<option>third</option>
+		</select>
+	</div>
+</fieldset>
+
+<fieldset>
+	<legend>7.#target10의 select option의 홀수(odd)만 배경색을 주세요. </legend>
+	<button onclick="target10()">target10</button>
+	<div id="target10">
+		<i>#target10</i>
+		<select multiple="multiple">
+			<option>option1(odd)</option>
+			<option>option2(even)</option>
+			<option>option3(odd)</option>
+			<option>option4(even)</option>
+		</select>
+	</div>
+</fieldset>
+<fieldset>
+	<legend>8.div태그 중에 자식 노드를 갖지 않는 모든 div를 삭제하세요.</legend>
+	<button onclick="target12()">target12</button>
+	<div class="target12"><span>span1</span></div><br/>
+	<div class="target12"></div><br/>
+	<div class="target12"><span>span2</span></div><br/>
+	<div class="target12"></div>
+</fieldset>
+<fieldset>
+	<legend>9.table에 row1(첫번째 tr)과 row2(두번째 tr)의 위치를 바꾸시오.</legend>
+	<button onclick="target14()">target14</button>
+	<div id="target14"><i>#target14</i>
+		<table>
+			<tr class="one"><td>ROW1</td><td>Let me down!</td></tr>
+			<tr class="two"><td>ROW2</td><td>Let me up!</td></tr>
+		</table>
+	</div>
+</fieldset>
+<fieldset>
+	<legend>10.target17에 배경색을 반복해서 바뀌게 적용하세요.(예:red와 yellow반복 바뀜)</legend>
+	<button onclick="target17()">#target17</button><br/><br/>
+	<div id="target17">#target17</div>
+</fieldset>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>summernote</title>
+  <!-- include jquery -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- include libraries BS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.css" />
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.js"></script> 
+
+  <!-- include summernote -->
+  <link rel="stylesheet" href="../summernote-master/summernote-master/dist/summernote-bs4.css">
+  <script type="text/javascript" src="../summernote-master/summernote-master/dist/summernote-bs4.js"></script>
+  <script type="text/javascript" src="../summernote-master/summernote-master/lang/summernote-ko-KR.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.summernote').summernote({
+    	lang: 'ko-KR',
+        height: 500,
+        tabsize: 2,
+        linkTargetBlank: false,      
+        focus: true                  // set focus to editable area after initializing summernote
+      });
+    });
+  </script>
+</head>
+<body>
+<form action="WikiServlet?command=wikiUpdate2" method="post" name="formm">
+		
+			<textarea id="summernote" name="title"></textarea>
+		
+		<div class="output"></div>
+		<input type="submit" type=button value='저장'>
+	</form>
+</body>
+</html>

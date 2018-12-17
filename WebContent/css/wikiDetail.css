@@ -1,0 +1,18 @@
+.wikiDetail{background-color:#ffffff;}
+
+.wikiDetail h1{border-bottom: 1px solid #bfbfbf;
+               padding-bottom: 10px;
+}
+.wikiDetail h2{border-bottom: 1px solid #bfbfbf;
+               padding-bottom: 10px;
+}
+.wikiDetail ul{list-style-type:none; border: 1px solid #bfbfbf;}
+.wikiDetail ul il{border: none;}
+
+.wikiDetail ol{ border: 1px solid #bfbfbf;}
+.wikiDetail ol il{border: none;}
+
+
+.title{border: 0px; padding: 10px; font-size: 50px; width: 100%;}
+
+
